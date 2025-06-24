@@ -1,0 +1,56 @@
+RNA-Seq QC report
+-----------------------------------
+
+>>>>>>> Input
+
+    bam file = D4W1Aligned.sortedByCoord.out.bam
+    gff file = /data/pathology/cxia/projects/0.ref/1.HeteroderaSchachtii/heterodera_schachtii.PRJNA522950.WBPS19/heterodera_schachtii.PRJNA522950.WBPS19.annotations.gtf
+    counting algorithm = uniquely-mapped-reads
+    protocol = non-strand-specific
+    5'-3' bias region size = 100
+    5'-3' bias number of top transcripts = 1000
+
+
+>>>>>>> Reads alignment
+
+    reads aligned  = 229,778,823
+    total alignments = 229,778,823
+    secondary alignments = 0
+    non-unique alignments = 0
+    aligned to genes  = 200,694,046
+    ambiguous alignments = 383,442
+    no feature assigned = 28,700,693
+    not aligned = 0
+    SSP estimation (fwd/rev) = 0.52 / 0.48
+
+
+>>>>>>> Reads genomic origin
+
+    exonic =  200,694,046 (87.49%)
+    intronic = 24,342,903 (10.61%)
+    intergenic = 4,357,790 (1.9%)
+    overlapping exon = 24,103,643 (10.51%)
+
+
+>>>>>>> Transcript coverage profile
+
+    5' bias = 0.49
+    3' bias = 0.27
+    5'-3' bias = 1.29
+
+
+>>>>>>> Junction analysis
+
+    reads at junctions = 183,582,757
+
+    AGGT : 2.9%
+    ACCT : 2.84%
+    TCCT : 2.64%
+    AGGC : 2.36%
+    AGGA : 2.19%
+    AGAT : 2.03%
+    ATCT : 1.98%
+    GCCT : 1.94%
+    AGCT : 1.59%
+    TTCT : 1.44%
+    AGAA : 1.41%
