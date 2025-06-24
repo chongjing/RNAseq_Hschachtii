@@ -116,7 +116,7 @@ echo "STAR alignment process completed."
 
 ```
 
-An example of quality control results from Qualimap is [here](https://github.com/chongjing/RNAseq_Hschachtii/D4W1)
+An example of quality control results from `mapinsights` is [here](https://github.com/chongjing/RNAseq_Hschachtii/tree/main/D4W1)
 
 ### 4. Differetial Expression analysis
 #### 4.1 D4EF vs D4W
