@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg height="840" width="920" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<text fill="black" font-family="Arial" font-size="20" stroke="black" text-anchor="middle" x="440" y="35.7142857142857">PCA</text>
+	<rect fill="none" height="720" rx="3" ry="3" stroke="black" stroke-width="2" width="720" x="80" y="60" />
+	<text fill="black" font-family="Arial" font-size="15" stroke="black" text-anchor="middle" x="440" y="837">PC1</text>
+	<text fill="black" font-family="Arial" font-size="15" stroke="black" text-anchor="middle" transform="rotate(-90,20,420)" x="20" y="420">PC2</text>
+	<line fill="black" stroke="black" stroke-width="3" x1="80" x2="80" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="80" y="810">-0.442 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="60" y2="60" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="66">-0.394 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="152" x2="152" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="152" y="810">-0.364 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="132" y2="132" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="138">-0.285 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="224" x2="224" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="224" y="810">-0.287 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="204" y2="204" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="210">-0.176 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="296" x2="296" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="296" y="810">-0.210 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="276" y2="276" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="282">-0.067 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="368" x2="368" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="368" y="810">-0.132 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="348" y2="348" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="354">0.042 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="440" x2="440" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="440" y="810">-0.055 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="420" y2="420" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="426">0.151 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="512" x2="512" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="512" y="810">0.022 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="492" y2="492" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="498">0.260 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="584" x2="584" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="584" y="810">0.100 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="564" y2="564" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="570">0.369 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="656" x2="656" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="656" y="810">0.177 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="636" y2="636" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="642">0.478 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="728" x2="728" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="728" y="810">0.254 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="708" y2="708" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="714">0.586 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="800" x2="800" y1="780" y2="795" />
+	<text font-family="Arial" font-size="15" text-anchor="middle" x="800" y="810">0.332 </text>
+	<line fill="black" stroke="black" stroke-width="3" x1="65" x2="80" y1="780" y2="780" />
+	<text font-family="Arial" font-size="15" text-anchor="end" x="63" y="786">0.695 </text>
+	<text font-family="Arial" font-size="18" text-anchor="Start" x="822.485" y="252">Group</text>
+	<circle cx="830" cy="270" fill="black" fill-opacity="1" r="5.01" />
+	<text font-family="Arial" font-size="15" text-anchor="Start" x="837.515" y="272.505">D9EF</text>
+	<rect fill="black" fill-opacity="1" height="10.02" stroke="black" stroke-width="1" width="10.02" x="824.99" y="294.99" />
+	<text font-family="Arial" font-size="15" text-anchor="Start" x="837.515" y="302.505">D4EF</text>
+	<polygon points="830,324.99 835.01,330 830,335.01 824.99,330 " style="fill: black; fill-opacity: 1; stroke: black; stroke-width: 0" />
+	<text font-family="Arial" font-size="15" text-anchor="Start" x="837.515" y="332.505">D9W</text>
+	<polygon points="830,355.66134 834.33866,362.505 825.66134,362.505 " style="fill: black; fill-opacity: 1; stroke: black; stroke-width: 1" />
+	<text font-family="Arial" font-size="15" text-anchor="Start" x="837.515" y="362.505">D4W</text>
+	<rect fill="rgb(27,158,119)" fill-opacity="0.6" height="10.02" stroke="rgb(27,158,119)" stroke-width="1" width="10.02" x="351.883198940955" y="62.0488235294118" />
+	<rect fill="rgb(27,158,119)" fill-opacity="0.6" height="10.02" stroke="rgb(27,158,119)" stroke-width="1" width="10.02" x="262.308422570196" y="450.247948838808" />
+	<rect fill="rgb(27,158,119)" fill-opacity="0.6" height="10.02" stroke="rgb(27,158,119)" stroke-width="1" width="10.02" x="82.0488235294117" y="381.283643488847" />
+	<polygon points="792.941176470588,441.719727687015 797.279836470588,448.563387687015 788.602516470588,448.563387687015 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 1" />
+	<polygon points="768.869375472462,480.515745682896 773.208035472462,487.359405682896 764.530715472462,487.359405682896 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 1" />
+	<polygon points="683.073599003069,380.031265322146 687.412259003069,386.874925322146 678.734939003069,386.874925322146 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 1" />
+	<circle cx="168.181603077895" cy="708.268704847826" fill="rgb(27,158,119)" fill-opacity="0.6" r="5.01" />
+	<circle cx="206.66165604101" cy="755.031835983208" fill="rgb(27,158,119)" fill-opacity="0.6" r="5.01" />
+	<circle cx="300.171881791554" cy="654.02540173389" fill="rgb(27,158,119)" fill-opacity="0.6" r="5.01" />
+	<polygon points="784.410954909103,490.075917435034 789.420954909103,495.085917435034 784.410954909103,500.095917435034 779.400954909103,495.085917435034 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 0" />
+	<polygon points="733.812586096686,619.147563219856 738.822586096686,624.157563219856 733.812586096686,629.167563219856 728.802586096686,624.157563219856 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 0" />
+	<polygon points="744.453013123054,767.931176470588 749.463013123054,772.941176470588 744.453013123054,777.951176470588 739.443013123054,772.941176470588 " style="fill: rgb(27,158,119); fill-opacity: 0.6; stroke: rgb(27,158,119); stroke-width: 0" />
+	<!-- 
+	Generated using the Perl SVG Module V2.78
+	by Ronan Oger
+	Info: http://www.roitsystems.com/
+ -->
+</svg>
