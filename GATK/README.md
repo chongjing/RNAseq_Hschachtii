@@ -268,10 +268,10 @@ cd /data/pathology/cxia/projects/Sebastian/07.X204SC25060928-Z01-F001/06.Genetic
 The genetic distance and phylogenetic tree:
 <tr>
     <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/GeneticDistance.jpg" alt="Image 1" width="400"/></td>
-    <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/PhylogeneticTree.svg" alt="Image 2" width="400"/></td>
+    <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/PhylogeneticTree.jpg" alt="Image 2" width="400"/></td>
 </tr>
 #### 5.3.2 Cluster
 ```bash
 /data/pathology/program/VCF2PCACluster/bin/VCF2PCACluster -InVCF 12.AllSample.snps.minQ10000.noMissing.recode.vcf.gz -OutPut 13.AllSample.snps.minQ10000.noMissing.cluster -InSampleGroup 13.AllSample.Group
 ```
-<img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/02.clustering_genetic/13.AllSample.snps.minQ10000.noMissing.cluster.N.PC1_PC2.p.svg" alt="Image 1" width="400"/>
+<img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/02.clustering_genetic/13.AllSample.snps.minQ10000.noMissing.cluster.N.PC1_PC2.p.jpg" alt="Image 1" width="600"/>
