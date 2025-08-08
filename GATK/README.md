@@ -132,10 +132,12 @@ dev.off
 ```
 
 The cluster and dendrogram are:
-<tr>
+<table>
+  <tr>
     <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/01.clustering_expression/03.cluster.jpeg" alt="Image 1" width="400"/></td>
     <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/01.clustering_expression/04.samples_dendrop.jpeg" alt="Image 2" width="400"/></td>
-</tr>
+  </tr>
+</table>
 
 #### 5.2 Genetic distance
 ##### 5.2.1 GATK SNP calling - gVCF for each sample
@@ -266,10 +268,14 @@ cd /data/pathology/cxia/projects/Sebastian/07.X204SC25060928-Z01-F001/06.Genetic
 /data/pathology/program/VCF2Dis-1.54/bin/VCF2Dis -InPut 11.AllSample.snps.indels.vcf.gz -OutPut 12.GeneticDis
 ```
 The genetic distance and phylogenetic tree:
-<tr>
-    <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/GeneticDistance.jpg" alt="Image 1" width="400"/></td>
-    <td><img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/PhylogeneticTree.jpg" alt="Image 2" width="400"/></td>
-</tr>
+<div align="center">
+  <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/GeneticDistance.jpg" alt="Genetic Distance" width="600"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/03.phylogenetic/PhylogeneticTree.jpg" alt="Phylogenetic Tree" width="600"/>
+</div>
+
 #### 5.3.2 Cluster
 ```bash
 /data/pathology/program/VCF2PCACluster/bin/VCF2PCACluster -InVCF 12.AllSample.snps.minQ10000.noMissing.recode.vcf.gz -OutPut 13.AllSample.snps.minQ10000.noMissing.cluster -InSampleGroup 13.AllSample.Group
