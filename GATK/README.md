@@ -281,3 +281,62 @@ The genetic distance and phylogenetic tree:
 /data/pathology/program/VCF2PCACluster/bin/VCF2PCACluster -InVCF 12.AllSample.snps.minQ10000.noMissing.recode.vcf.gz -OutPut 13.AllSample.snps.minQ10000.noMissing.cluster -InSampleGroup 13.AllSample.Group
 ```
 <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/02.clustering_genetic/13.AllSample.snps.minQ10000.noMissing.cluster.N.PC1_PC2.p.jpg" alt="Image 1" width="600"/>
+
+### 6. Genetic Relationship (non-DEGs)
+#### 6.1 non-DEGs in all pairwise comparisons
+```bash
+# extract genes with -0.5 < log2FoldChange < 0.5 && padj > 0.05
+cd /data/pathology/cxia/projects/Sebastian/07.X204SC25060928-Z01-F001/04.DE_analysis
+for dir in *; do echo "processing ${dir}"; 
+  awk -F"," 'function abs(x) { return (x < 0) ? -x : x } abs($3)<"0.5" && $7 > "0.05" {print $1}' ${dir}/03.P-cutoff-0.05.csv | sed 's/"//g' | sort -t "_" -k3,3n > ${dir}.nonDEGs.list; 
+done
+```
+
+```python
+# get non-DEGs in all pairwise comparisons
+def read_file_lines(path):
+    with open(path, 'r') as f:
+        return set(line.strip() for line in f if line.strip())
+
+# Replace these with your actual file paths
+files = ["01.D4EF_vs_D4W.nonDEGs.list", "02.D9EF_vs_D9W.nonDEGs.list", "03.D9W_D4W.nonDEGs.list", "04.D9EF_vs_D4EF.nonDEGs.list"]
+
+# Read and intersect
+sets = [read_file_lines(f) for f in files]
+common = set.intersection(*sets)
+
+# Write to output file
+with open("20.nonDEGs.list", "w") as out:
+    for item in sorted(common):
+        out.write(item + "\n")
+
+print(f"✅ Intersection written to '20.nonDEGs.list' with {len(common)} items.")
+```
+
+#### 6.2 Genetic distance
+```bash
+cd /home/cx264/project/07.X204SC25060928-Z01-F001/07.GeneticDistance.noDEGs
+while read line; do awk -F"\t" -v line=$line '$4==line {print $0}' /home/cx264/project/00.ref/1.HeteroderaSchachtii/heterodera_schachtii.PRJNA522950.WBPS19/heterodera_schachtii.PRJNA522950.WBPS19.annotations.bed >> 21.nonDGE.bed; done < 20.nonDEGs.list
+sort -k1,1 -k2,2n  21.nonDGE.bed > 21.nonDGE.sort.bed
+
+# get all SNPs within nonDEGs
+vcftools --gzvcf 12.AllSample.snps.minQ10000.noMissing.recode.vcf.gz --min-alleles 2 --max-alleles 2 --minQ 10000 --bed 21.nonDGE.sort.bed --remove-indels --recode --recode-INFO-all --stdout | gzip -c > 22.AllSample.snps.noDEGs.vcf.gz
+#Read 6522 BED file entries.
+#After filtering, kept 65057 out of a possible 213116 Sites
+
+/home/cx264/program/VCF2Dis-1.54/bin/VCF2Dis -InPut 22.AllSample.snps.noDEGs.vcf.gz -OutPut 23.GeneticDis.mat
+```
+The genetic distance and phylogenetic tree:
+<div align="center">
+  <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/05.noDEGs/GeneticDistance.jpg" alt="Genetic Distance" width="600"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/05.noDEGs/PhylogeneticTree.jpg" alt="Phylogenetic Tree" width="600"/>
+</div>
+
+#### 6.3 Cluster
+```bash
+/home/cx264/program/VCF2PCACluster/bin/VCF2PCACluster -InVCF 22.AllSample.snps.noDEGs.vcf.gz -OutPut 24.AllSample.snps.minQ10000.noMissing.noDEGs.cluster -InSampleGroup 22.AllSample.Group
+```
+<img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/05.noDEGs/24.AllSample.snps.minQ10000.noMissing.noDEGs.cluster.C.PC1_PC2.p.jpg" alt="Image 1" width="600"/>
