@@ -340,3 +340,18 @@ The genetic distance and phylogenetic tree:
 /home/cx264/program/VCF2PCACluster/bin/VCF2PCACluster -InVCF 22.AllSample.snps.noDEGs.vcf.gz -OutPut 24.AllSample.snps.minQ10000.noMissing.noDEGs.cluster -InSampleGroup 22.AllSample.Group
 ```
 <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/05.noDEGs/24.AllSample.snps.minQ10000.noMissing.noDEGs.cluster.C.PC1_PC2.p.jpg" alt="Image 1" width="600"/>
+
+### 7. Fst Population Differentiation (non-DEGs)
+SNPs with minQ 10000 and no missing data in any sample are used for Fst calculation using VCFtools. Number of SNPs with Fst above 0.25 (highly differentiated) are summarized.
+
+```bash
+cd /home/cx264/project/07.X204SC25060928-Z01-F001/08.Fst.noDEGs
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D4W_population.txt --weir-fst-pop D4EF_population.txt --out 002.D4.Water_vs_EF
+awk -F"\t" '$3>0.25 {print $0}' 002.D4.Water_vs_EF.weir.fst | less -N
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D4W_population.txt --weir-fst-pop D9W_population.txt --out 002.D4W_vs_D9W
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D4W_population.txt --weir-fst-pop D9EF_population.txt --out 002.D4W_vs_D9EF
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D4EF_population.txt --weir-fst-pop D9W_population.txt --out 002.D4EF_vs_D9W
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D4EF_population.txt --weir-fst-pop D9EF_population.txt --out 002.D4EF_vs_D9EF
+vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D9W_population.txt --weir-fst-pop D9EF_population.txt --out 002.D9W_vs_D9EF
+```
+<img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/06.Fst_noDEGs/Fst_noDEGs.jpg" alt="Image 1" width="600"/>
