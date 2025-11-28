@@ -355,3 +355,13 @@ vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --
 vcftools --gzvcf ../07.GeneticDistance.noDEGs/22.AllSample.snps.noDEGs.vcf.gz --weir-fst-pop D9W_population.txt --weir-fst-pop D9EF_population.txt --out 002.D9W_vs_D9EF
 ```
 <img src="https://github.com/chongjing/RNAseq_Hschachtii/blob/main/GATK/06.Fst_noDEGs/Fst_noDEGs.jpg" alt="Image 1" width="600"/>
+
+#### Hypergeometric Test ####
+to statistically assess whether the high Fst SNPs are enriched in certain chromosomes
+
+```bash
+python3 003.HypergeometricTest.py 002.D4W_vs_D9W.weir.fst 004.D4W_vs_D9W.tsv
+python3 003.HypergeometricTest.py 002.D4.Water_vs_EF.weir.fst 004.D4W_vs_D4EF.tsv
+python3 003.HypergeometricTest.py 002.D9W_vs_D9EF.weir.fst 004.D9W_vs_D9EF.tsv
+python3 003.HypergeometricTest.py 002.D4EF_vs_D9EF.weir.fst 004.D4EF_vs_D9EF.tsv
+```
