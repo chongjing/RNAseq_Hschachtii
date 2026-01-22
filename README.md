@@ -312,3 +312,75 @@ write.csv(as.data.frame(res05), file="03.P-cutoff-0.05.csv")
 The idea here is to see if the D4 samples and the D9 samples are genetically different populations, from within the same pool. 
 
 Please check [here](https://github.com/chongjing/RNAseq_Hschachtii/tree/main/GATK)
+
+### 6. Expression Clustering
+#### 6.1 Clustering all genes
+First, I tried to cluster all genes (TPM normalized counts) using K=8 clusters. Then there were two clusters, C8 and C6, with each only having high express of group genes from D4EF4 and D4W1 samples. Then I tried to use `min.std = 0.2` to remove genes with low standard deviation of expression.
+
+```R
+# conda activate R4.5.1
+# /home/cx264/program/anaconda3/envs/R4.5.1/bin/Rscript
+
+library(ClusterGVis)
+library(Biobase)
+library(Mfuzz)
+
+setwd("/home/cx264/project/Sebastian/03.Mason/001.full.analysis")
+
+## counts from Chongjing
+counts <- read.csv("../03.TPM4cluster.csv", sep=",", row.names =1)
+
+#svg("201.Optimal_Cluster.svg")
+pdf("201.Optimal_Cluster.pdf")
+getClusters(counts)
+dev.off()
+cm <- clusterData(counts, cluster.method = "mfuzz", cluster.num = 7, iter = 200, min.std = 0.2)
+ct <- clusterData(counts, cluster.method = "TCseq", cluster.num = 7)
+ck <- clusterData(counts, cluster.method = "kmeans", cluster.num = 7)
+pdf("702.clusters.pdf")
+visCluster(cm, plot.type = "line", ncol = 2, ms.col = c("green", "orange", "red"))
+visCluster(ct, plot.type = "line", ncol = 2, ms.col = c("green", "orange", "red"))
+visCluster(ck, plot.type = "line")
+dev.off()
+
+#line plot
+#svg("703.line_heatmap.C7.before.filter.minstd0.2.svg", 16, 24)
+pdf("703.line_heatmap.C7.before.filter.minstd0.2.pdf", 9, 24)
+visCluster(object = cm,
+           plot.type = "both",
+           ms.col = c("green","orange","red"),
+           column_names_rot = 45)
+dev.off()
+
+# save cluster information and membership (if exit)
+write.csv(cm$wide.res, "704.cm.7clusters.minstd0.2.csv",row.names = TRUE, quote = F)
+write.csv(ct$wide.res, "704.ct.7clusters.minstd0.2.csv",row.names = TRUE, quote = F)
+write.csv(ck$wide.res, "704.ck.7clusters.minstd0.2.csv",row.names = TRUE, quote = F)
+
+### filter based on membership
+# Filter genes with membership > 0.8
+cm_filter0.8 <- cm
+
+# Filter the wide.res data frame
+cm_filter0.8$wide.res <- cm$wide.res[cm$wide.res$membership > 0.8, ]
+
+# Filter the long.res data frame (contains the same membership values)
+cm_filter0.8$long.res <- cm$long.res[cm$long.res$membership > 0.8, ]
+
+# Update cluster.list to only include filtered genes
+filtered_genes <- cm_filter0.8$wide.res$gene
+cm_filter0.8$cluster.list <- lapply(cm$cluster.list, function(cluster_genes) {
+  cluster_genes[cluster_genes %in% filtered_genes]
+})
+
+#line plot after filtering
+#svg("705.line_heatmap.C7.after.filter.svg", 16, 24)
+pdf("705.line_heatmap.C7.after.filter.minstd0.2.pdf", 9, 24)
+visCluster(object = cm_filter0.8,
+           plot.type = "both",
+           ms.col = c("green","orange","red"),
+           column_names_rot = 45)
+dev.off()
+
+write.csv(cm_filter0.8$wide.res, "705.cm.7clusters.filter.minstd0.2.csv",row.names = TRUE, quote = F)
+```
