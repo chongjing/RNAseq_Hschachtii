@@ -384,3 +384,4 @@ dev.off()
 
 write.csv(cm_filter0.8$wide.res, "705.cm.7clusters.filter.minstd0.2.csv",row.names = TRUE, quote = F)
 ```
+![Expression Cluster](https://github.com/chongjing/RNAseq_Hschachtii/blob/main/Clustering/C7.after.filter.minstd0.2.png)
