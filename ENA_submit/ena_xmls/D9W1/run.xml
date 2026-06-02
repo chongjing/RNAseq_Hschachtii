@@ -1,0 +1,12 @@
+<RUN_SET>
+  <RUN alias="webin-reads-D9W1">
+    <TITLE>Raw reads: D9W1</TITLE>
+    <EXPERIMENT_REF refname="webin-reads-D9W1" />
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="webin-cli/reads/D9W1/D9W1_EKRN250021321-1A_22VH2WLT4_L6_1.fq.gz" filetype="fastq" checksum_method="MD5" checksum="731cedcab3ecea38c477f6b8fbb7ee2c" />
+        <FILE filename="webin-cli/reads/D9W1/D9W1_EKRN250021321-1A_22VH2WLT4_L6_2.fq.gz" filetype="fastq" checksum_method="MD5" checksum="4755b9d7d3c999abd18fc38e8b52e90b" />
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>

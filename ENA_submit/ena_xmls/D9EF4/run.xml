@@ -1,0 +1,12 @@
+<RUN_SET>
+  <RUN alias="webin-reads-D9EF4">
+    <TITLE>Raw reads: D9EF4</TITLE>
+    <EXPERIMENT_REF refname="webin-reads-D9EF4" />
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="webin-cli/reads/D9EF4/D9EF4_EKRN250021326-1A_22VH2WLT4_L6_1.fq.gz" filetype="fastq" checksum_method="MD5" checksum="94b3718948e0a3e782a24f8eae0e407a" />
+        <FILE filename="webin-cli/reads/D9EF4/D9EF4_EKRN250021326-1A_22VH2WLT4_L6_2.fq.gz" filetype="fastq" checksum_method="MD5" checksum="3d95e958c1228d24e595ce9d9e7954f9" />
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>
