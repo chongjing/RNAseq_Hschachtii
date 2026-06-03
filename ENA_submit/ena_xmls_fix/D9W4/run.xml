@@ -1,0 +1,11 @@
+<RUN_SET>
+  <RUN accession="ERR17359756">
+    <EXPERIMENT_REF accession="ERX16749163"/>
+    <DATA_BLOCK>
+      <FILES>
+        <FILE filename="D9W4_EKRN250021323-1A_22VH2WLT4_L6_1.fq.gz" filetype="fastq" checksum_method="MD5" checksum="e6a9c5f8e7a6f0969d88bb762cc91553" />
+        <FILE filename="D9W4_EKRN250021323-1A_22VH2WLT4_L6_2.fq.gz" filetype="fastq" checksum_method="MD5" checksum="cf623c7fdd95603f733afce2bb9d79ab" />
+      </FILES>
+    </DATA_BLOCK>
+  </RUN>
+</RUN_SET>
